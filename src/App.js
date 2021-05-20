@@ -2,22 +2,21 @@ import React from "react";
 
 const Mobile = (props) => {
   return (
-    // <div>
-    //   <img
-    //     src={props.imgSrc}
-    //     alt="pic_here"
-    //   />
-    //   <div>
-    //     <h3>{props.imgTitle}</h3>
-    //     <a
-    //       href={props.imgBuy}
-    //       target="_blank"
-    //     >
-    //       <button> Buy Here</button>
-    //     </a>
-    //   </div>
-    // </div>
-    <h1>{props.key}</h1>
+    <div>
+      <img
+        src={props.imgSrc}
+        alt="pic_here"
+      />
+      <div>
+        <h3>{props.imgTitle}</h3>
+        <a
+          href={props.imgBuy}
+          target="_blank"
+        >
+          <button> Buy Here</button>
+        </a>
+      </div>
+    </div>
   );
 };
 
