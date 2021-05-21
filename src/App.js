@@ -27,7 +27,7 @@ function App() {
     <>
     {/* Sachin Veer component and props*/}
     <hr />
-    <p className ="main"> Gallary with card and array map</p>
+    <p className ="main"> Components and props</p>
     <div className="main">
     <Mobile 
       imgSrc="https://m.media-amazon.com/images/I/71tpxtLD0aL._AC_UY218_.jpg" 
