@@ -2,7 +2,6 @@ import React from 'react';
 import {CardList} from './CardList';
 import { Card } from  './Card';
 
-console.log(CardList);
 const rootDivStyle = {
     display:"flex",
     justifyContent:"space-between"
@@ -19,8 +18,8 @@ const Gallary = () => {
 
 const MobileGalleryApp = () => {
     return(<>
-        <p className ="main"> Gallary with card and array map</p>
-        <div style={rootDivStyle}><Gallary /></div>
+            <p className ="main"> Gallary with card and array map</p>
+            <div style={rootDivStyle}><Gallary /></div>
         </>
         )
 }

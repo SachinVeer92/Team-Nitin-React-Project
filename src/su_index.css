@@ -1,0 +1,54 @@
+.su_header {
+    display:flex;
+    padding:5px;
+    justify-content: center;
+    text-align: center;
+    background-color: #477070;
+    color:white
+}
+#budget_container {
+    display:flex;
+    justify-content: flex-start;
+}
+#budget_container #sidebar {
+    flex:1;
+    justify-content:auto;
+    margin:8px
+}
+#budget_container #expense_body {
+    background: #eaeaea;
+    min-height: 400px;
+    flex:2
+}
+#budget_container .form-container {
+    background-color: white;
+    padding: 10px;
+}
+#budget_container .form-container form {
+    display: flex;
+    justify-content: center;
+}
+#budget_container .form-container form .form-group {
+    margin:5px
+}
+.expenses_container {
+    display:flex;
+    flex-wrap: wrap;
+}
+.expenses_container .expenseDiv {
+    margin:5px;
+    background-color: bisque;
+    flex:1;
+    display: flex;
+    justify-content: space-around;
+}
+.expenseDiv div button {
+    background-color: transparent;
+    border: none;
+    color:black;
+}
+.expenseDiv div {
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
