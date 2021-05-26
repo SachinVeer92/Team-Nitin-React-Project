@@ -1,4 +1,4 @@
-import react,{useState} from 'react';
+import react,{useState,useEffect} from 'react';
 import Expense from './Expense';
 import BudgetForm from './BudgetForm';
 
@@ -15,7 +15,6 @@ const BudgetBody = () => {
         setExpenseData( ( currentExpensesData ) => {
                 return( [...currentExpensesData, newExpense ] )
         } )
-        updateUnbudgetedAmount();
     }
 
     const removeExpense = ( keyId ) => {
@@ -24,18 +23,16 @@ const BudgetBody = () => {
                 return index != keyId;
             } )
         } )
-        updateUnbudgetedAmount();
     }
-    
-    const updateUnbudgetedAmount = async () => {
+
+    useEffect( () => {   // useEffect hook should useful as an ulternative for component lifecycle ecents
         let sum = 0;
         expenseData.map( ( currentObj,index, arrayElements ) => {
-            console.log(currentObj.expense_amount);
             sum += Number(currentObj.expense_amount);
         } )
         unbudgetedAmount = income - sum;
         document.getElementById('remainingAmount').value = unbudgetedAmount
-    }
+    }, [ expenseData, income ] ) // will trigger on change of these states
 
     return(<>
         <div id="sidebar">
@@ -48,7 +45,7 @@ const BudgetBody = () => {
             <p> Unbudgeted Amount</p>
             <div className="input-group mb-3">
                 <span className="input-group-text" id="basic-addon1">Rs</span>
-                <input id="remainingAmount" type="number" className="form-control" disabled value={ unbudgetedAmount } />
+                <input id="remainingAmount" type="number" className="form-control" disabled />
             </div>
         </div>
         <section id="expense_body">

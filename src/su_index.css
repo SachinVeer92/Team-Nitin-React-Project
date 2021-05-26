@@ -17,8 +17,8 @@
 }
 #budget_container #expense_body {
     background: #eaeaea;
-    min-height: 400px;
-    flex:2
+    min-height: 700px;
+    flex:4
 }
 #budget_container .form-container {
     background-color: white;
